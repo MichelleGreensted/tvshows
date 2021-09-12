@@ -13,12 +13,11 @@ header {
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
-  line-height: 26.4px;
-  height: 70px;
+  height: 60px;
 }
-/* .header-text{
+.header-text {
   vertical-align: middle;
-} */
+}
 .search-bar {
   margin: 10px;
   font-family: monaco, Consolas, "Lucida Console", monospace;
@@ -32,17 +31,17 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
-.episode-entry {
+.episode-card {
   background: rgb(192, 209, 194);
   padding: 10px;
   margin: 10px;
   width: 450px;
   border-radius: 5px;
 }
-.episode-entry h2 {
+.episode-card h2 {
   text-align: center;
 }
-.episode-entry p {
+.episode-card p {
   text-align: justify;
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 14px;
@@ -54,6 +53,9 @@ header {
 img {
   border-radius: 5px;
   width: 450px;
+}
+footer {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
 /* 

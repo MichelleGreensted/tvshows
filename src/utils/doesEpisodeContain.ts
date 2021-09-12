@@ -1,4 +1,4 @@
-import { IEpisode } from "../components/EpisodeEntry";
+import { IEpisode } from "../components/EpisodeCard";
 
 function doesEpisodeContainInNameOrSummary(
   episode: IEpisode,

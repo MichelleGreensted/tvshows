@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./app.css";
 import episodes from "./episodes.json";
 // import EpisodeData from "./EpisodeData";
-import EpisodeEntry from "./components/EpisodeEntry";
+import EpisodeCard from "./components/EpisodeCard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import doesEpisodeContainInNameOrSummary from "./utils/doesEpisodeContain";
@@ -32,7 +32,7 @@ function App(): JSX.Element {
         </div>
         <div className={"container"}>
           {matchingEpisodes.map((episode) => (
-            <EpisodeEntry key={episode.id} data={episode} />
+            <EpisodeCard key={episode.id} data={episode} />
           ))}
         </div>
       </main>
