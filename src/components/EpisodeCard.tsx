@@ -32,7 +32,7 @@ function EpisodeCard(props: IEpisodeProps): JSX.Element {
         S{episode.season}E{episode.number} - {episode.name}
       </h2>
       <img alt={episode.name} src={episode.image.medium} />
-      <p>{episode.summary}</p>
+      <p>{episode.summary.replace(/<p>/g, "").replace(/<\/p>/g, "")}</p>
     </div>
   );
 }
