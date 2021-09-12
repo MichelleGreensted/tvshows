@@ -14,7 +14,7 @@ header {
   font-variant: normal;
   font-weight: 700;
   line-height: 26.4px;
-  height: 70px
+  height: 70px;
 }
 /* .header-text{
   vertical-align: middle;
@@ -39,10 +39,10 @@ header {
   width: 450px;
   border-radius: 5px;
 }
-.episode-entry h2{
+.episode-entry h2 {
   text-align: center;
 }
-.episode-entry p{
+.episode-entry p {
   text-align: justify;
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 14px;

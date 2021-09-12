@@ -31,7 +31,7 @@ function EpisodeEntry(props: IEpisodeProps): JSX.Element {
       <h2>
         S{episode.season}E{episode.number} - {episode.name}
       </h2>
-      <img alt={episode.name} src={episode.image.medium}/>
+      <img alt={episode.name} src={episode.image.medium} />
       <p>{episode.summary}</p>
     </div>
   );
