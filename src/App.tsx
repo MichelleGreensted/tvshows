@@ -15,6 +15,7 @@ function App(): JSX.Element {
     const jsonData = await response.json();
     setData(jsonData);
   }
+  fetchEpisodeData();
 
   const [searchTerm, setSearchTerm] = useState("");
   function handleChange(event: {
