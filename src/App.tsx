@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.css";
-// import episodes from "./episodes.json";
 //components
 import EpisodeCard, { IEpisode } from "./components/EpisodeCard";
 import Header from "./components/Header";
@@ -9,21 +8,25 @@ import Footer from "./components/Footer";
 import doesEpisodeContainInNameOrSummary from "./utils/doesEpisodeContain";
 
 function App(): JSX.Element {
+  //fetching data
   const [EpisodesData, setData] = useState<IEpisode[]>([]);
+
   async function fetchEpisodeData() {
     const response = await fetch("https://api.tvmaze.com/shows/82/episodes");
     const jsonData = await response.json();
     setData(jsonData);
   }
-  fetchEpisodeData();
+  useEffect(() => {
+    fetchEpisodeData();
+  }, []);
 
+  //search bar
   const [searchTerm, setSearchTerm] = useState("");
   function handleChange(event: {
     target: { value: React.SetStateAction<string> };
   }) {
     setSearchTerm(event.target.value);
   }
-
   const matchingEpisodes = EpisodesData.filter((episode) =>
     doesEpisodeContainInNameOrSummary(episode, searchTerm)
   );
